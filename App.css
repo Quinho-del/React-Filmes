@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #e50914;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #141414;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+input {
+  flex: 1;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 9999px;
+  background: #222;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s;
+}
+
+input:focus {
+  background: #333;
+  box-shadow: 0 0 0 4px rgba(229, 9, 20, 0.3);
+}
+
+button {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button:hover {
+  background: #f40612;
+  transform: translateY(-2px);
+}
+
+.btn-clear {
+  background: #444;
+}
+
+.btn-clear:hover {
+  background: #666;
+}
+
+.status {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(229, 9, 20, 0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.card-info p {
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+.details-panel {
+  background: #222;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.details-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.details-image img {
+  width: 100%;
+  display: block;
+}
+
+.details-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.details-content p {
+  color: #ddd;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.review {
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .details-panel {
+    grid-template-columns: 1fr;
+  }
+}
